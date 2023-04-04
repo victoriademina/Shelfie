@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Shelfie</title>
     <style>
-        .todo {
+        .book {
             padding: 20px;
             margin: 10px;
             background-color: #eee;
@@ -42,11 +42,11 @@
         <button type="submit">Submit</button>
     </form>
     <hr>
-    {% for todo in todos %}
-        <div class="todo">
-            <p>{{ todo['title'] }} <i>({{ todo['status']}})</i></p>
-            <form method="POST" action="{{ url_for('delete', id=todo['_id']) }}" >
-                <input type="submit" value="Delete Todo"
+    {% for book in books %}
+        <div class="book">
+            <p>{{ book['title'] }} <i>({{ book['status']}})</i></p>
+            <form method="POST" action="{{ url_for('delete', id=book['_id']) }}" >
+                <input type="submit" value="Delete book"
                        onclick="return confirm('Are you sure you want to delete this entry?')">
             </form>
         </div>
