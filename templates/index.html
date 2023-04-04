@@ -12,35 +12,39 @@
     </style>
 </head>
 <body>
-    <h1>FlaskTODO</h1>
+    <h1>Shelfie</h1>
     <hr>
-    <div class="content">
+    <div class="title">
     <form method="post">
         <p>
-            <b><label for="content">Todo content</label></b>
+            <b><label for="title">What book would you like to add?</label></b>
         </p>
         <p>
-            <input type="text" name="content"
-                placeholder="Todo Content"></input>
+            <input type="text" name="title"
+                placeholder="Book title">
         </p>
 
         <p>
-            <b><label for="degree">Degree</label></b>
+            <b><label for="status">Status</label></b>
         </p>
         <p>
-            <input id="degree-0" name="degree" required type="radio" value="Important">
-            <label for="degree-0">Important</label>
+            <input id="status-0" name="status" required type="radio" value="want-to-read">
+            <label for="status-0">Want to read</label>
         </p>
         <p>
-            <input id="degree-1" name="degree" required type="radio" value="Unimportant">
-            <label for="degree-1">Unimportant</label>
+            <input id="status-1" name="status" required type="radio" value="reading">
+            <label for="status-1">Reading</label>
+        </p>
+        <p>
+            <input id="status-2" name="status" required type="radio" value="finished">
+            <label for="status-1">Finished</label>
         </p>
         <button type="submit">Submit</button>
     </form>
     <hr>
     {% for todo in todos %}
         <div class="todo">
-            <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
+            <p>{{ todo['title'] }} <i>({{ todo['status']}})</i></p>
             <form method="POST" action="{{ url_for('delete', id=todo['_id']) }}" >
                 <input type="submit" value="Delete Todo"
                        onclick="return confirm('Are you sure you want to delete this entry?')">
