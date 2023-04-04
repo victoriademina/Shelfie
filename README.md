@@ -49,4 +49,4 @@ db.books.find()
 
 
 ## License
-Shelfie is released under the MIT License. See `LICENSE` for details.
+Shelfie is released under the MIT License. See [LICENSE](https://github.com/victoriademina/Shelfie/blob/main/LICENSE) for details.
