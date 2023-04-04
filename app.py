@@ -10,7 +10,6 @@ db = client.flask_db
 todos = db.todos
 
 
-# https://www.digitalocean.com/community/tutorials/how-to-use-mongodb-in-a-flask-application
 @app.route('/', methods=('GET', 'POST'))
 def index():
     if request.method == 'POST':
