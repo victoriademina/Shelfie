@@ -13,7 +13,7 @@ Before you can run Shelfie, you'll need to have the following installed on your 
 
 - Python 3.6 or higher
 - Flask
-- MongoDB 4.0 or higher
+- MongoDB 6.0 or higher
 - pymongo
 
 ### Installation
